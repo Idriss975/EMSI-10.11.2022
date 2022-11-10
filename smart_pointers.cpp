@@ -52,6 +52,6 @@ int main()
     for (int* i = Tab2; i < Tab2 + taille; i++)
         cout << "-> " << *i;
     
-
+    delete[] Tab2;
     return 0;
 }
