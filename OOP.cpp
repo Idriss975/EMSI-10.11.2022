@@ -29,6 +29,8 @@ int main()
     Compte ComptCopy2(Comp2);
     return 0;
 }*/
+
+//Voiture.h
 class Voiture
 {
 private:
@@ -45,6 +47,7 @@ public:
         puissance = 0;
     }
     Voiture(int id, string mq, int v, int p);
+    Voiture(Voiture &v);
     
     int Getid()
     {
@@ -62,11 +65,13 @@ public:
     {
         return marque;
     }
-
+    void Setid(int i), SetPuiss(int p), SetVitesse(int v), SetMarque(string m); //id = param;
     
     ~Voiture();
 };
 
+//Voiture.cpp
+//#include "Voiture.h"
 Voiture::Voiture(int id, string mq, int v, int p)//:Voiture()
 {
     Voiture::id = id;
