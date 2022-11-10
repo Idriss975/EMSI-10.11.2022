@@ -37,7 +37,13 @@ private:
     int vitesse;
     int puissance;
 public:
-    Voiture();
+    Voiture()
+    {
+        id = 0;
+        marque = "";
+        vitesse = 0;
+        puissance = 0;
+    }
     Voiture(int id, string mq, int v, int p);
     
     int Getid()
@@ -61,7 +67,7 @@ public:
     ~Voiture();
 };
 
-Voiture::Voiture(int id, string mq, int v, int p):Voiture()
+Voiture::Voiture(int id, string mq, int v, int p)//:Voiture()
 {
     Voiture::id = id;
     marque = mq;
